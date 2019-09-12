@@ -11,13 +11,25 @@ class App extends React.Component {
     balls: 0,
     strikes: 0,
     fouls: 0,
-    hit: false
+    outs: 0,
+    hit: false,
+    homeScore: 0,
+    inning: 0,
+    guestScore: 0
+  }
+
+  componentDidMount() {
+
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+
   }
 
   render() {
     return (
       <div className="App">
-        <Display />
+        <Display displayInfo={this.state} />
       </div>
     );
   }

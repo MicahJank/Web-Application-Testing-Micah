@@ -5,12 +5,12 @@ import Bottom from './Bottom.js';
 import { Box } from '@material-ui/core';
 
 
-const Display = () => {
+const Display = ( { displayInfo } ) => {
 
     return (
         <Box display='flex' flexDirection='column'>
-            <Top />
-            <Bottom />
+            <Top homeScore={displayInfo.homeScore} inning={displayInfo.inning} guestScore={displayInfo.guestScore} />
+            <Bottom balls={displayInfo.balls} strikes={displayInfo.strikes} fouls={displayInfo.fouls} outs={displayInfo.outs} />
         </Box>
     )
 };
