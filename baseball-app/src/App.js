@@ -2,23 +2,18 @@ import React from 'react';
 
 class App extends React.Component {
 
+  // here is the state that will keep track of all the different variables for the person at bat
+  state = {
+    balls: 0,
+    strikes: 0,
+    fouls: 0,
+    hit: false
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
       </div>
     );
   }
