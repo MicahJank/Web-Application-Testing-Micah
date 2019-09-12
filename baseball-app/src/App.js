@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Display from './components/display/Display.js';
+
 import { Box } from '@material-ui/core';
 
 class App extends React.Component {
@@ -15,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
+        <Display />
       </div>
     );
   }
