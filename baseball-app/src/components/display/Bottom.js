@@ -5,22 +5,22 @@ import { Box } from '@material-ui/core';
 const Bottom = ( { balls, strikes, fouls, outs } ) => {
 
     return (
-        <Box display='flex' flexDirection='row'>
-            <Box display='flex' flexDirection='column'>
-                <h3>BALL</h3>
-                <h4>{balls}</h4>
+        <Box display='flex' flexDirection='row' justifyContent='space-between'>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>BALL</h1>
+                <h2>{balls}</h2>
             </Box>
-            <Box display='flex' flexDirection='column'>
-                <h3>STRIKE</h3>
-                <h4>{strikes}</h4>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>STRIKE</h1>
+                <h2>{strikes}</h2>
             </Box>
-            <Box display='flex' flexDirection='column'>
-                <h3>OUT</h3>
-                <h4>{outs}</h4>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>OUT</h1>
+                <h2>{outs}</h2>
             </Box>
-            <Box display='flex' flexDirection='column'>
-                <h3>FOUL</h3>
-                <h4>{fouls}</h4>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>FOUL</h1>
+                <h2>{fouls}</h2>
             </Box>
         </Box>
     )

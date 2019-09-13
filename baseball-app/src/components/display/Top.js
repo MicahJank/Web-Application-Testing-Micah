@@ -1,22 +1,33 @@
 import React from 'react';
 
-import { Box } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
+
+
+const useStyles = makeStyles({
+    section: {
+        marginBottom: '50px',
+        marginTop: '30px'
+    }
+
+})
 
 const Top = ( { homeScore, inning, guestScore } ) => {
 
+    const classes = useStyles();
+
     return (
-        <Box display='flex' flexDirection='row'>
-            <Box display='flex' flexDirection='column'>
-                <h3>HOME</h3>
-                <h4>{homeScore}</h4>
+        <Box className={classes.section} display='flex' flexDirection='row' justifyContent='space-between'>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>HOME</h1>
+                <h2>{homeScore}</h2>
             </Box>
-            <Box display='flex' flexDirection='column'>
-                <h3>INN</h3>
-                <h4>{inning}</h4>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>INN</h1>
+                <h2>{inning}</h2>
             </Box>
-            <Box display='flex' flexDirection='column'>
-                <h3>GUEST</h3>
-                <h4>{guestScore}</h4>
+            <Box display='flex' flexDirection='column' alignItems='center'>
+                <h1>GUEST</h1>
+                <h2>{guestScore}</h2>
             </Box>
         </Box>
         

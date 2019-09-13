@@ -2,7 +2,7 @@ import React from 'react';
 
 import Display from './components/display/Display.js';
 
-import { Box } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 
 class App extends React.Component {
 
@@ -28,9 +28,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <Box display='flex' justifyContent='center'>
         <Display displayInfo={this.state} />
-      </div>
+      </Box>
     );
   }
 }
