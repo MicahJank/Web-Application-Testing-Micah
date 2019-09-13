@@ -19,19 +19,27 @@ class App extends React.Component {
     guestScore: 0
   }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-  }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
+  // componentDidUpdate(prevProps, prevState) {
 
+  // }
+
+
+  // Button handler functions
+  addStrike = () => {
+    this.setState({
+      strikes: ++this.state.strikes
+    })
   }
 
   render() {
     return (
       <Box display='flex' flexDirection='column' alignItems='center'>
         <Display displayInfo={this.state} />
-        <Dashboard />
+        <Dashboard addStrike={this.addStrike} />
       </Box>
     );
   }

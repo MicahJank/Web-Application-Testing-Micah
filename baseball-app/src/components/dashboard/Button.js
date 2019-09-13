@@ -9,12 +9,14 @@ const useStyles = makeStyles({
     }
 })
 
-const Button = ( { type } ) => {
+const Button = ( { type, handlerFunction } ) => {
 
     const classes = useStyles();
 
+
+
     return (
-        <ActionButton className={classes.primary}>{type}</ActionButton>
+        <ActionButton onClick={handlerFunction} variant='contained' color='primary' className={classes.primary}>{type}</ActionButton>
     )
 };
 
