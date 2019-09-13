@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Display from './components/display/Display.js';
+import Dashboard from './components/dashboard/Dashboard.js';
 
 import { Box, makeStyles } from '@material-ui/core';
 
@@ -28,8 +29,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Box display='flex' justifyContent='center'>
+      <Box display='flex' flexDirection='column' alignItems='center'>
         <Display displayInfo={this.state} />
+        <Dashboard />
       </Box>
     );
   }
