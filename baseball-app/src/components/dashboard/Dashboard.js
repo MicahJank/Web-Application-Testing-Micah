@@ -11,16 +11,16 @@ const useStyles = makeStyles({
     }
 })
 
-const Dashboard = ( { addStrike } ) => {
+const Dashboard = ( { addStrike, addBall, addFoul, toggleHit } ) => {
 
     const classes = useStyles();
 
     return (
         <Box className={classes['buttons-container']} display='flex' justifyContent='space-around'>
             <Button handlerFunction={addStrike} type='strike' />
-            <Button type='ball' />
-            <Button type='foul' />
-            <Button type='hit' />
+            <Button handlerFunction={addBall} type='ball' />
+            <Button handlerFunction={addFoul} type='foul' />
+            <Button handlerFunction={toggleHit} type='hit' />
         </Box>
     )
 };

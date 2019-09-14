@@ -35,11 +35,29 @@ class App extends React.Component {
     })
   }
 
+  addBall = () => {
+    this.setState({
+      balls: ++this.state.balls
+    })
+  }
+
+  addFoul = () => {
+    this.setState({
+      fouls: ++this.state.fouls
+    })
+  }
+
+  toggleHit = () => {
+    this.setState({
+      hit: !this.state.hit
+    })
+  }
+
   render() {
     return (
       <Box display='flex' flexDirection='column' alignItems='center'>
         <Display displayInfo={this.state} />
-        <Dashboard addStrike={this.addStrike} />
+        <Dashboard addStrike={this.addStrike} addBall={this.addBall} addFoul={this.addFoul} toggleHit={this.toggleHit} />
       </Box>
     );
   }
