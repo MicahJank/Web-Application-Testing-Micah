@@ -16,8 +16,8 @@ const Button = ( { type, handlerFunction } ) => {
 
 
     return (
-        <ActionButton label='button' onClick={handlerFunction} variant='contained' color='primary' className={classes.primary}>{type}</ActionButton>
+        <ActionButton data-testid={`test`} label='button' onClick={handlerFunction} variant='contained' color='primary' className={classes.primary}>{type}</ActionButton>
     )
 };
 
-export default Button;
+export default Button; 

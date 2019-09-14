@@ -10,7 +10,6 @@ test('App renders without crashing', () => {
 
 test('contains the scores', () => {
     const container = render(<App />);
-    console.log(container);
     container.getByTestId('home');
     container.getByTestId('inn');
     container.getByTestId('guest');
