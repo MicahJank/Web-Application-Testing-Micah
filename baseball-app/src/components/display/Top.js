@@ -17,15 +17,15 @@ const Top = ( { homeScore, inning, guestScore } ) => {
 
     return (
         <Box className={classes.section} display='flex' flexDirection='row' justifyContent='space-between'>
-            <Box display='flex' flexDirection='column' alignItems='center'>
+            <Box data-testid='home' display='flex' flexDirection='column' alignItems='center'>
                 <h1>HOME</h1>
                 <h2>{homeScore}</h2>
             </Box>
-            <Box display='flex' flexDirection='column' alignItems='center'>
+            <Box data-testid='inn' display='flex' flexDirection='column' alignItems='center'>
                 <h1>INN</h1>
                 <h2>{inning}</h2>
             </Box>
-            <Box display='flex' flexDirection='column' alignItems='center'>
+            <Box data-testid='guest' display='flex' flexDirection='column' alignItems='center'>
                 <h1>GUEST</h1>
                 <h2>{guestScore}</h2>
             </Box>
