@@ -23,37 +23,53 @@ class App extends React.Component {
 
   // }
 
-  // componentDidUpdate(prevProps, prevState) {
-
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    // the logic for the fouls. I need to check both that the state has changed AND that the fouls is not 0 because when the the fouls resets to 0 in the code block below this one
+    // that will cause componentDidUpdate to get caled which will in turn check this logic again
+    if( (prevState.fouls !== this.state.fouls) && (this.state.fouls !== 0)) {
+      this.setState({
+        strikes: this.state.strikes < 2 ? this.state.strikes + 1 : this.state.strikes 
+      })
+    }
+    // setting up the logic for the game, hit needs to get put back to false after resetting strikes and balls
+    if( (this.state.strikes === 3) || (this.state.balls === 4) || (this.state.hit) ) {
+      this.setState({
+        strikes: 0,
+        balls: 0,
+        hit: false,
+        fouls: 0
+      })
+    }
+  }
 
 
   // Button handler functions
   addStrike = () => {
     this.setState({
-      strikes: ++this.state.strikes
+      strikes: this.state.strikes + 1
     })
   }
 
   addBall = () => {
     this.setState({
-      balls: ++this.state.balls
+      balls: this.state.balls + 1
     })
   }
 
   addFoul = () => {
     this.setState({
-      fouls: ++this.state.fouls
+      fouls: this.state.fouls + 1
     })
   }
 
   toggleHit = () => {
     this.setState({
-      hit: !this.state.hit
+      hit: true
     })
   }
 
   render() {
+    
     return (
       <Box display='flex' flexDirection='column' alignItems='center'>
         <Display displayInfo={this.state} />
