@@ -16,7 +16,7 @@ const Button = ( { type, handlerFunction } ) => {
 
 
     return (
-        <ActionButton onClick={handlerFunction} variant='contained' color='primary' className={classes.primary}>{type}</ActionButton>
+        <ActionButton label='button' onClick={handlerFunction} variant='contained' color='primary' className={classes.primary}>{type}</ActionButton>
     )
 };
 
